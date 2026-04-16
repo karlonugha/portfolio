@@ -12,24 +12,25 @@ export default function About() {
           <div>
             <p className="text-sky-400 font-mono text-sm mb-3">// about me</p>
             <h2 className="text-4xl font-bold text-white mb-6">
-              4+ Years in <span className="gradient-text">Enterprise IT</span>
+              Technical Background, <span className="gradient-text">Cloud Focus</span>
             </h2>
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
-                I'm Karl Onugha, an <strong className="text-white">IT Operations Engineer</strong> based in Cork, Ireland
-                with 4+ years of experience supporting enterprise environments at companies like
-                <strong className="text-white"> Johnson & Johnson, Mastercard, and Omnicom/TBWA</strong>.
+                I have a solid foundation in <strong className="text-white">IT support and operations</strong> —
+                working with enterprise systems, troubleshooting infrastructure issues, managing identities,
+                and supporting business applications across regulated environments.
               </p>
               <p>
-                My background spans network monitoring, identity management (Azure AD, Okta),
-                device management (JAMF/SCCM), and IT operations in regulated manufacturing environments.
-                I hold <strong className="text-white">CCNA & CCNP</strong> certifications and Fortinet NSE credentials.
+                I'm now transitioning into <strong className="text-white">Cloud Engineering</strong> and
+                <strong className="text-white"> Full Stack Development</strong>, with hands-on AWS projects,
+                React applications, and Python scripting. I bring the practical systems knowledge
+                that most pure developers lack — understanding how infrastructure, networking,
+                and security actually work in production.
               </p>
               <p>
-                I'm now expanding into <strong className="text-white">Cloud Engineering</strong> and
-                <strong className="text-white"> Full Stack Development</strong> — building React applications,
-                deploying on AWS, and automating workflows with Python. Currently pursuing the
-                <strong className="text-white"> AWS Solutions Architect</strong> certification.
+                Certified in <strong className="text-white">CCNA & CCNP</strong>, currently pursuing
+                <strong className="text-white"> AWS Solutions Architect</strong>, and building
+                full-stack projects to demonstrate real-world engineering capability.
               </p>
             </div>
 
@@ -59,13 +60,11 @@ export default function About() {
               </div>
               <div className="p-5 font-mono text-sm space-y-2">
                 <p><span className="text-sky-400">$</span> <span className="text-white">whoami</span></p>
-                <p className="text-gray-400">Karl Onugha — IT Ops / Cloud Engineer</p>
-                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">cat skills.txt</span></p>
-                <p className="text-emerald-400">AWS · Azure AD · CCNP · React · Python · Linux</p>
-                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">cat location.txt</span></p>
-                <p className="text-gray-400">Cork, Ireland 🇮🇪</p>
-                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">echo $STATUS</span></p>
-                <p className="text-yellow-400">🟢 Open to Cloud & IT Engineering roles</p>
+                <p className="text-gray-400">Karl Onugha — IT Ops transitioning to Cloud</p>
+                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">cat background.txt</span></p>
+                <p className="text-emerald-400">Systems · Networks · IAM · Cloud · Dev</p>
+                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">echo $GOAL</span></p>
+                <p className="text-yellow-400">🎯 Cloud Engineer / Full Stack Developer</p>
                 <p className="mt-2 flex items-center gap-1">
                   <span className="text-sky-400">$</span>
                   <span className="cursor-blink text-white">|</span>
@@ -97,8 +96,8 @@ export default function About() {
 
         {/* ── Work Experience ── */}
         <div className="mb-20">
-          <p className="text-sky-400 font-mono text-sm mb-3">// work experience</p>
-          <h2 className="text-3xl font-bold text-white mb-10">Career History</h2>
+          <p className="text-sky-400 font-mono text-sm mb-3">// career history</p>
+          <h2 className="text-3xl font-bold text-white mb-10">Experience That Transfers</h2>
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-5 top-0 bottom-0 w-px bg-white/10 hidden md:block" />
