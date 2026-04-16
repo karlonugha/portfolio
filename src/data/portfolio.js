@@ -1,39 +1,41 @@
 export const personal = {
   name: 'Karl Onugha',
-  title: 'Cloud Engineer & Full Stack Developer',
-  tagline: 'Building scalable cloud infrastructure and modern web applications.',
+  title: 'IT Operations & Cloud Engineer',
+  tagline: 'IT Operations Engineer with 4+ years of enterprise experience. Transitioning into Cloud Engineering and Full Stack Development.',
   // Email split to prevent bot scraping — joined at runtime
-  emailUser: 'Karlonugha',
+  emailUser: 'karlonugha',
   emailDomain: 'yahoo.com',
   github: 'https://github.com/karlonugha',
-  location: 'Ireland',
+  linkedin: 'https://linkedin.com/in/karl-onugha-28217b98',
+  location: 'Cork, Ireland',
   available: true,
+  phone: '+353 899527578',
 }
 
 export const skills = [
   {
-    category: 'Cloud & DevOps',
+    category: 'Cloud & AWS',
     icon: '☁️',
     color: 'from-sky-500 to-blue-600',
-    items: ['AWS (EC2, S3, RDS, CloudFront, Route 53)', 'IAM & Security Groups', 'CI/CD Pipelines', 'GitHub Actions', 'Docker (learning)', 'Vercel / Netlify'],
+    items: ['AWS (EC2, S3, IAM, VPC, Lambda, ECS)', 'Azure AD', 'IAM & Security Groups', 'CI/CD Pipelines', 'GitHub Actions', 'Vercel / Netlify'],
   },
   {
-    category: 'Frontend',
-    icon: '🎨',
+    category: 'Networking & Security',
+    icon: '🔐',
     color: 'from-violet-500 to-purple-600',
-    items: ['React', 'Tailwind CSS', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Vite', 'Zustand'],
+    items: ['CCNP Routing & Switching', 'DNS, TCP/IP, DHCP, VLANs', 'Okta MFA', 'Fortinet NSE1/2/3', 'SolarWinds Monitoring', 'VPN & Wireless Networks'],
   },
   {
-    category: 'Backend',
+    category: 'Systems & DevOps',
     icon: '⚙️',
     color: 'from-emerald-500 to-teal-600',
-    items: ['Node.js', 'Express.js', 'Python', 'REST APIs', 'PostgreSQL', 'SQLite'],
+    items: ['MacOS, Windows 10/11', 'Linux', 'JAMF / SCCM', 'ServiceNow, BMC Helix', 'SAP, Citrix', 'Node.js & Express'],
   },
   {
-    category: 'Python & Automation',
-    icon: '🐍',
+    category: 'Development',
+    icon: '💻',
     color: 'from-yellow-500 to-orange-500',
-    items: ['Scripting & Automation', 'Workflow Automation', 'Data Processing', 'CLI Tools', 'File Management', 'API Integration'],
+    items: ['React', 'Tailwind CSS', 'JavaScript (ES6+)', 'Python Scripting', 'PostgreSQL', 'REST APIs'],
   },
 ]
 
@@ -91,22 +93,77 @@ export const projects = [
 
 export const experience = [
   {
-    role: 'Self-Taught Developer',
-    company: 'Independent Projects',
-    period: '2024 – Present',
-    description: 'Building full-stack web applications and cloud infrastructure projects. Focused on React, Node.js, Python automation and AWS deployment.',
-    icon: '💻',
+    role: 'IT Operations / Network & Systems Engineer',
+    company: 'ICT Services (Client: Johnson & Johnson)',
+    location: 'Cork, Ireland',
+    period: 'Jun 2023 – Mar 2026',
+    icon: '🏭',
+    bullets: [
+      'Monitored network traffic and performance using SolarWinds in a regulated manufacturing environment',
+      'Participated in incident, problem, and change management via ServiceNow',
+      'Managed Azure AD user accounts, security groups, password resets, and access control',
+      'Built, configured, and deployed MacOS, iOS, and Windows 10/11 devices for new hires',
+      'Supported user onboarding/offboarding including VPN/MFA setup and asset assignment',
+      'Collaborated with Network, Compute, Workplace Services, and Security teams',
+    ],
   },
   {
-    role: 'Home Automation Project',
-    company: 'Personal Project',
-    period: '2025',
-    description: 'Designed and built a simulated smart home dashboard with real-time device state management, notification system and responsive UI.',
-    icon: '🏠',
+    role: 'Systems Support Engineer (Network, Identity & Workplace Services)',
+    company: 'ICT Services (Client: Omnicom/TBWA)',
+    location: 'Dublin, Ireland',
+    period: 'Sep 2022 – Jun 2023',
+    icon: '🖥️',
+    bullets: [
+      'Provisioned and managed MacOS and Windows devices using JAMF and SCCM',
+      'Administered Azure Active Directory & Okta MFA for secure enterprise access',
+      'Enforced security compliance using FileVault encryption and VPN (Netskope)',
+      'Troubleshot network access, DNS, and authentication-related issues',
+    ],
+  },
+  {
+    role: 'IT Support Engineer',
+    company: 'Mastercard',
+    location: 'Dublin, Ireland',
+    period: 'Mar 2022 – May 2022',
+    icon: '💳',
+    bullets: [
+      'Deployed and configured Windows and MacOS systems using JAMF and SCCM',
+      'Managed incidents via ITSM tools in a global financial services environment',
+      'Collaborated with global teams under strict SLA and compliance requirements',
+    ],
+  },
+  {
+    role: 'IT Support Technician',
+    company: 'Viatris',
+    location: 'Cork, Ireland',
+    period: 'Dec 2021 – Aug 2022',
+    icon: '🔧',
+    bullets: [
+      'Supported IT infrastructure in a manufacturing and regulated environment',
+      'Supported production systems including Zebra printers, RF scanners, and tablets',
+      'Performed incident analysis and troubleshooting via ServiceNow',
+    ],
+  },
+]
+
+export const education = [
+  {
+    degree: 'Master of Network and Information Security',
+    school: 'Griffith College, Limerick',
+    period: '2019 – 2020',
+    icon: '🎓',
+  },
+  {
+    degree: 'Bachelor of Software Engineering',
+    school: 'American University of Nigeria',
+    period: '2010 – 2014',
+    icon: '🎓',
   },
 ]
 
 export const certifications = [
-  { name: 'AWS Cloud Infrastructure', status: 'Active', icon: '☁️', color: 'text-orange-400' },
-  { name: 'AWS Solutions Architect', status: 'In Progress', icon: '📚', color: 'text-yellow-400' },
+  { name: 'CCNA – Routing & Switching', status: 'Certified', icon: '🌐', color: 'text-sky-400' },
+  { name: 'CCNP – Routing & Switching', status: 'Certified', icon: '🌐', color: 'text-sky-400' },
+  { name: 'Fortinet NSE1, NSE2 & NSE3', status: 'Certified', icon: '🔐', color: 'text-emerald-400' },
+  { name: 'AWS Solutions Architect', status: 'In Progress', icon: '☁️', color: 'text-orange-400' },
 ]

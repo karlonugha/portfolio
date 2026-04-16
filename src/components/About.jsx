@@ -1,43 +1,44 @@
-import { certifications, projects } from '../data/portfolio'
+import { certifications, projects, experience, education } from '../data/portfolio'
 
 export default function About() {
   const totalProjects = projects.filter(p => !p.comingSoon).length
-  const comingSoon = projects.filter(p => p.comingSoon).length
+
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
 
-          {/* Text */}
+        {/* ── Bio + Stats ── */}
+        <div className="grid md:grid-cols-2 gap-16 items-start mb-20">
           <div>
             <p className="text-sky-400 font-mono text-sm mb-3">// about me</p>
             <h2 className="text-4xl font-bold text-white mb-6">
-              Passionate about <span className="gradient-text">Cloud & Code</span>
+              4+ Years in <span className="gradient-text">Enterprise IT</span>
             </h2>
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
-                I'm Karl Onugha, a self-taught developer based in Ireland with a strong focus on
-                <strong className="text-white"> cloud engineering</strong> and
-                <strong className="text-white"> full-stack development</strong>.
+                I'm Karl Onugha, an <strong className="text-white">IT Operations Engineer</strong> based in Cork, Ireland
+                with 4+ years of experience supporting enterprise environments at companies like
+                <strong className="text-white"> Johnson & Johnson, Mastercard, and Omnicom/TBWA</strong>.
               </p>
               <p>
-                I build modern web applications using React and Node.js, automate workflows with
-                Python, and architect cloud infrastructure on AWS. I'm passionate about writing
-                clean, efficient code and deploying scalable solutions.
+                My background spans network monitoring, identity management (Azure AD, Okta),
+                device management (JAMF/SCCM), and IT operations in regulated manufacturing environments.
+                I hold <strong className="text-white">CCNA & CCNP</strong> certifications and Fortinet NSE credentials.
               </p>
               <p>
-                Currently expanding my AWS expertise toward the
-                <strong className="text-white"> Solutions Architect certification</strong>,
-                while building production-ready full-stack projects to demonstrate real-world skills.
+                I'm now expanding into <strong className="text-white">Cloud Engineering</strong> and
+                <strong className="text-white"> Full Stack Development</strong> — building React applications,
+                deploying on AWS, and automating workflows with Python. Currently pursuing the
+                <strong className="text-white"> AWS Solutions Architect</strong> certification.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-10">
               {[
-                { value: `${totalProjects}+`, label: 'Projects Built' },
-                { value: 'AWS', label: 'Cloud Infrastructure' },
-                { value: '100%', label: 'Self-Taught' },
+                { value: '4+', label: 'Years Experience' },
+                { value: `${totalProjects}+`, label: 'Dev Projects' },
+                { value: 'CCNP', label: 'Certified' },
               ].map(({ value, label }) => (
                 <div key={label} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                   <p className="text-2xl font-bold gradient-text">{value}</p>
@@ -47,9 +48,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right side — certifications + terminal */}
+          {/* Terminal + Certs */}
           <div className="space-y-4">
-            {/* Terminal card */}
             <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/5">
                 <span className="w-3 h-3 rounded-full bg-red-500" />
@@ -59,14 +59,15 @@ export default function About() {
               </div>
               <div className="p-5 font-mono text-sm space-y-2">
                 <p><span className="text-sky-400">$</span> <span className="text-white">whoami</span></p>
-                <p className="text-gray-400">Karl Onugha — Cloud Engineer & Full Stack Dev</p>
+                <p className="text-gray-400">Karl Onugha — IT Ops / Cloud Engineer</p>
                 <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">cat skills.txt</span></p>
-                <p className="text-emerald-400">AWS · React · Node.js · Python · PostgreSQL</p>
+                <p className="text-emerald-400">AWS · Azure AD · CCNP · React · Python · Linux</p>
+                <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">cat location.txt</span></p>
+                <p className="text-gray-400">Cork, Ireland 🇮🇪</p>
                 <p className="mt-2"><span className="text-sky-400">$</span> <span className="text-white">echo $STATUS</span></p>
-                <p className="text-yellow-400">🟢 Open to Cloud & Fullstack roles</p>
+                <p className="text-yellow-400">🟢 Open to Cloud & IT Engineering roles</p>
                 <p className="mt-2 flex items-center gap-1">
                   <span className="text-sky-400">$</span>
-                  <span className="text-white">_</span>
                   <span className="cursor-blink text-white">|</span>
                 </p>
               </div>
@@ -74,16 +75,16 @@ export default function About() {
 
             {/* Certifications */}
             <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl p-5">
-              <h3 className="text-white font-semibold mb-4">Certifications & Learning</h3>
+              <h3 className="text-white font-semibold mb-4">Certifications</h3>
               <div className="space-y-3">
                 {certifications.map(c => (
                   <div key={c.name} className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <span className="text-xl">{c.icon}</span>
+                      <span className="text-lg">{c.icon}</span>
                       <span className="text-gray-300 text-sm">{c.name}</span>
                     </div>
                     <span className={`text-xs px-2 py-1 rounded-full border ${
-                      c.status === 'Active'
+                      c.status === 'Certified'
                         ? 'text-emerald-400 border-emerald-400/30 bg-emerald-400/10'
                         : 'text-yellow-400 border-yellow-400/30 bg-yellow-400/10'
                     }`}>{c.status}</span>
@@ -93,6 +94,63 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* ── Work Experience ── */}
+        <div className="mb-20">
+          <p className="text-sky-400 font-mono text-sm mb-3">// work experience</p>
+          <h2 className="text-3xl font-bold text-white mb-10">Career History</h2>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-5 top-0 bottom-0 w-px bg-white/10 hidden md:block" />
+            <div className="space-y-8">
+              {experience.map((e, i) => (
+                <div key={i} className="md:pl-16 relative">
+                  {/* Timeline dot */}
+                  <div className="absolute left-3 top-5 w-4 h-4 rounded-full bg-sky-500 border-2 border-sky-300 hidden md:block" style={{ boxShadow: '0 0 10px rgba(56,189,248,0.5)' }} />
+                  <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl p-6 card-hover">
+                    <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+                      <div>
+                        <h3 className="text-white font-semibold text-base">{e.role}</h3>
+                        <p className="text-sky-400 text-sm mt-0.5">{e.company}</p>
+                        <p className="text-gray-600 text-xs mt-0.5">{e.location}</p>
+                      </div>
+                      <span className="text-xs text-gray-500 bg-white/5 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
+                        {e.period}
+                      </span>
+                    </div>
+                    <ul className="space-y-1.5 mt-3">
+                      {e.bullets.map((b, j) => (
+                        <li key={j} className="flex items-start gap-2 text-gray-400 text-sm">
+                          <span className="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0 mt-1.5" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Education ── */}
+        <div>
+          <p className="text-sky-400 font-mono text-sm mb-3">// education</p>
+          <h2 className="text-3xl font-bold text-white mb-8">Education</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {education.map((e, i) => (
+              <div key={i} className="bg-[#0d0d1a] border border-white/10 rounded-2xl p-6 flex items-start gap-4">
+                <span className="text-3xl">{e.icon}</span>
+                <div>
+                  <h3 className="text-white font-semibold">{e.degree}</h3>
+                  <p className="text-sky-400 text-sm mt-1">{e.school}</p>
+                  <p className="text-gray-600 text-xs mt-1">{e.period}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   )
