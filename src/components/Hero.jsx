@@ -1,7 +1,7 @@
 import { Mail, MapPin, ArrowDown } from 'lucide-react'
 import GithubIcon from './GithubIcon'
 import { personal } from '../data/portfolio'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const ROLES = [
   'Cloud Engineer',
@@ -13,6 +13,8 @@ const ROLES = [
 
 export default function Hero() {
   const roleRef = useRef(null)
+  const [emailRevealed, setEmailRevealed] = useState(false)
+  const email = `${personal.emailUser}@${personal.emailDomain}`
 
   useEffect(() => {
     let roleIdx = 0
@@ -90,7 +92,7 @@ export default function Hero() {
             View My Work
           </a>
           <a
-            href="mailto:Karlonugha@yahoo.com"
+            href="#contact"
             className="px-8 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors"
           >
             Get In Touch
@@ -104,10 +106,16 @@ export default function Hero() {
             <GithubIcon size={16} /> GitHub
           </a>
           <span className="w-1 h-1 bg-gray-700 rounded-full" />
-          <a href={`mailto:${personal.email}`}
-            className="flex items-center gap-2 hover:text-white transition-colors text-sm">
-            <Mail size={16} /> Email
-          </a>
+          <button
+            onClick={() => {
+              setEmailRevealed(true)
+              window.location.href = `mailto:${email}`
+            }}
+            className="flex items-center gap-2 hover:text-white transition-colors text-sm"
+          >
+            <Mail size={16} />
+            {emailRevealed ? email : 'Email Me'}
+          </button>
           <span className="w-1 h-1 bg-gray-700 rounded-full" />
           <span className="flex items-center gap-2 text-sm">
             <MapPin size={16} /> {personal.location}

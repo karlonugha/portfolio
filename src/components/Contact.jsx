@@ -1,8 +1,16 @@
 import { Mail, MapPin, Send } from 'lucide-react'
 import GithubIcon from './GithubIcon'
 import { personal } from '../data/portfolio'
+import { useState } from 'react'
 
 export default function Contact() {
+  const [emailRevealed, setEmailRevealed] = useState(false)
+  const email = `${personal.emailUser}@${personal.emailDomain}`
+
+  const handleEmailClick = () => {
+    setEmailRevealed(true)
+    window.location.href = `mailto:${email}`
+  }
   return (
     <section id="contact" className="py-24 px-6 bg-white/[0.02]">
       <div className="max-w-4xl mx-auto">
@@ -21,16 +29,17 @@ export default function Contact() {
             <div className="bg-[#0d0d1a] border border-white/10 rounded-2xl p-6">
               <h3 className="text-white font-semibold mb-6">Contact Details</h3>
               <div className="space-y-4">
-                <a href={`mailto:${personal.email}`}
-                  className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group">
+                <button
+                  onClick={handleEmailClick}
+                  className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group w-full text-left">
                   <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center group-hover:bg-sky-500/20 transition-colors">
                     <Mail size={16} className="text-sky-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-600 mb-0.5">Email</p>
-                    <p className="text-sm">{personal.email}</p>
+                    <p className="text-sm">{emailRevealed ? email : 'Click to reveal & contact'}</p>
                   </div>
-                </a>
+                </button>
 
                 <a href={personal.github} target="_blank" rel="noreferrer"
                   className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group">
@@ -74,7 +83,7 @@ export default function Contact() {
             <form
               onSubmit={(e) => {
                 e.preventDefault()
-                window.location.href = `mailto:${personal.email}?subject=Opportunity for Karl&body=${encodeURIComponent(e.target.message.value)}`
+                window.location.href = `mailto:${email}?subject=Opportunity for Karl&body=${encodeURIComponent(e.target.message.value)}`
               }}
               className="space-y-4"
             >

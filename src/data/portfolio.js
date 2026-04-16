@@ -2,7 +2,9 @@ export const personal = {
   name: 'Karl Onugha',
   title: 'Cloud Engineer & Full Stack Developer',
   tagline: 'Building scalable cloud infrastructure and modern web applications.',
-  email: 'Karlonugha@yahoo.com',
+  // Email split to prevent bot scraping — joined at runtime
+  emailUser: 'Karlonugha',
+  emailDomain: 'yahoo.com',
   github: 'https://github.com/karlonugha',
   location: 'Ireland',
   available: true,
@@ -105,6 +107,6 @@ export const experience = [
 ]
 
 export const certifications = [
-  { name: 'AWS Free Tier Account', status: 'Active', icon: '☁️', color: 'text-orange-400' },
+  { name: 'AWS Cloud Infrastructure', status: 'Active', icon: '☁️', color: 'text-orange-400' },
   { name: 'AWS Solutions Architect', status: 'In Progress', icon: '📚', color: 'text-yellow-400' },
 ]

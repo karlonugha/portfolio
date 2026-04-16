@@ -1,6 +1,8 @@
-import { certifications } from '../data/portfolio'
+import { certifications, projects } from '../data/portfolio'
 
 export default function About() {
+  const totalProjects = projects.filter(p => !p.comingSoon).length
+  const comingSoon = projects.filter(p => p.comingSoon).length
   return (
     <section id="about" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -33,8 +35,8 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-10">
               {[
-                { value: '4+', label: 'Projects Built' },
-                { value: 'AWS', label: 'Free Tier Active' },
+                { value: `${totalProjects}+`, label: 'Projects Built' },
+                { value: 'AWS', label: 'Cloud Infrastructure' },
                 { value: '100%', label: 'Self-Taught' },
               ].map(({ value, label }) => (
                 <div key={label} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
