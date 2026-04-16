@@ -113,9 +113,6 @@ export default function About() {
                         <p className="text-sky-400 text-sm mt-0.5">{e.company}</p>
                         <p className="text-gray-600 text-xs mt-0.5">{e.location}</p>
                       </div>
-                      <span className="text-xs text-gray-500 bg-white/5 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
-                        {e.period}
-                      </span>
                     </div>
                     <ul className="space-y-1.5 mt-3">
                       {e.bullets.map((b, j) => (
