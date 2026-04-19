@@ -16,21 +16,18 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
-                I have a solid foundation in <strong className="text-white">IT support and operations</strong> —
-                working with enterprise systems, troubleshooting infrastructure issues, managing identities,
-                and supporting business applications across regulated environments.
+                I have a background in <strong className="text-white">IT</strong> and have recently
+                transitioned into cloud development.
               </p>
               <p>
-                I'm now transitioning into <strong className="text-white">Cloud Engineering</strong> and
-                <strong className="text-white"> Full Stack Development</strong>, with hands-on AWS projects,
-                React applications, and Python scripting. I bring the practical systems knowledge
-                that most pure developers lack — understanding how infrastructure, networking,
-                and security actually work in production.
+                I've built and deployed multiple applications using <strong className="text-white">Node.js</strong>,
+                Git, and cloud platforms like <strong className="text-white">Vercel</strong>, and I am actively
+                developing my skills in <strong className="text-white">AWS architecture</strong>, backend systems,
+                and database design.
               </p>
               <p>
-                Certified in <strong className="text-white">CCNA & CCNP</strong>, currently pursuing
-                <strong className="text-white"> AWS Solutions Architect</strong>, and building
-                full-stack projects to demonstrate real-world engineering capability.
+                My focus is on building <strong className="text-white">reliable, scalable systems</strong> while
+                continuously improving my understanding of cloud infrastructure and best practices.
               </p>
             </div>
 

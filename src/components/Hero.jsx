@@ -12,11 +12,11 @@ import { personal } from '../data/portfolio'
 import { useEffect, useRef, useState } from 'react'
 
 const ROLES = [
-  'IT Operations Engineer',
-  'Cloud Engineer',
-  'Network & Systems Engineer',
-  'AWS Architect',
-  'Full Stack Developer',
+  'Cloud-Focused Developer',
+  'Node.js Developer',
+  'AWS Engineer',
+  'Backend Developer',
+  'Cloud Infrastructure Engineer',
 ]
 
 export default function Hero() {
@@ -88,7 +88,10 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-          {personal.tagline}
+          {personal.tagline}{' '}
+          <a href="#projects" className="text-sky-400 hover:text-sky-300 transition-colors">View my projects below</a>
+          {' '}or explore my{' '}
+          <a href={personal.github} target="_blank" rel="noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">GitHub</a>.
         </p>
 
         {/* CTA buttons */}
