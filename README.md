@@ -1,6 +1,6 @@
 # Karl Onugha — Portfolio
 
-A personal portfolio site for Karl Onugha, IT Operations & Cloud Engineer. Built with React, Vite, and Tailwind CSS.
+A personal portfolio site for Karl Onugha, Cloud-Focused Developer. Built with React, Vite, and Tailwind CSS.
 
 ## Tech Stack
 
@@ -14,20 +14,12 @@ A personal portfolio site for Karl Onugha, IT Operations & Cloud Engineer. Built
 - **Hero** — intro with availability status and call-to-action links
 - **About** — background summary
 - **Skills** — categorised skill grid (Cloud, Networking, Systems, Development)
-- **Projects** — featured project cards with live/GitHub links
+- **Projects** — featured project cards with live/GitHub links; the Cloud Task Manager API (`☁️`) is live at `http://3.249.216.92:3000` with source at [karlonugha/cloud-task-manager-api](https://github.com/karlonugha/cloud-task-manager-api)
 - **Contact** — contact info panel and a Formspree-powered contact form
 
 ## Contact Form
 
-The contact form (`src/components/Contact.jsx`) submits via [Formspree](https://formspree.io). To activate it:
-
-1. Sign up at [formspree.io](https://formspree.io) and create a new form
-2. Copy your form endpoint URL
-3. Replace `YOUR_FORM_ID` in `Contact.jsx`:
-
-```js
-const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID'
-```
+The contact form (`src/components/Contact.jsx`) submits via [Formspree](https://formspree.io). The endpoint is configured and active. To swap it out, update the `FORMSPREE_URL` constant in `Contact.jsx` with a different Formspree form ID.
 
 The form includes:
 - Controlled inputs with client-side `required` validation
@@ -36,6 +28,33 @@ The form includes:
 - Error state with inline alert and fallback prompt to email directly
 
 The email button opens in a new tab (`window.open`) rather than redirecting the current page.
+
+## Social Sharing / SEO
+
+`index.html` includes Open Graph and Twitter Card meta tags so the site renders a rich preview when shared on LinkedIn, Twitter/X, and other platforms. The tags reference:
+
+- **Title**: Karl Onugha | Cloud-Focused Developer
+- **Description**: Cloud-focused developer building and deploying applications using Node.js and AWS
+- **Image**: `/og-image.png` (served from the deployed site root)
+- **URL**: `https://portfolio-topaz-psi-82.vercel.app`
+
+To update the preview content, edit the `<meta>` tags in `index.html`.
+
+### OG Image Generator
+
+`generate-og-image.html` is a standalone HTML utility that renders the OG image on a `<canvas>` (1200×630) and lets you download it as PNG. Open the file in a browser, click **Download as PNG**, and place the resulting `og-image.png` in the `public/` directory so Vite serves it at the site root. Re-run the generator whenever you change your name, title, tech tags, or tagline.
+
+### SVG to PNG Converter
+
+`convert-og.js` is a Node.js script that uses Puppeteer to convert `public/og-image.svg` into a 1200×630 PNG at `public/og-image.png`. This is useful when the OG image source is an SVG file rather than the canvas-based HTML generator.
+
+```bash
+# Requires puppeteer (install if not already present)
+npm install puppeteer
+
+# Run the converter
+node convert-og.js
+```
 
 ## Getting Started
 
