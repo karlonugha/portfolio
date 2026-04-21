@@ -53,7 +53,7 @@ export const projects = [
     ],
     tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'AWS RDS', 'AWS S3', 'CloudFront', 'Elastic Beanstalk', 'GitHub Actions', 'Tailwind CSS', 'Zustand'],
     live: 'https://d3801nx5humfo6.cloudfront.net',
-    github: 'https://github.com/karlonugha/Kiro_Projects',
+    github: 'https://github.com/karlonugha/kaliscorush',
     emoji: '🍔',
     color: 'from-purple-500/20 to-violet-600/20',
     border: 'border-purple-500/30',
