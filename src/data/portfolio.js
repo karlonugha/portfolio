@@ -17,7 +17,7 @@ export const skills = [
     category: 'Cloud & AWS',
     icon: '☁️',
     color: 'from-sky-500 to-blue-600',
-    items: ['AWS (EC2, S3, IAM, VPC, Lambda, ECS)', 'Azure AD', 'IAM & Security Groups', 'CI/CD Pipelines', 'GitHub Actions', 'Vercel / Netlify'],
+    items: ['AWS (EC2, S3, RDS, CloudFront, Elastic Beanstalk, IAM, VPC, Lambda, ECS)', 'Azure AD', 'IAM & Security Groups', 'CI/CD Pipelines', 'GitHub Actions', 'Vercel / Netlify'],
   },
   {
     category: 'Networking & Security',
@@ -40,6 +40,28 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    title: 'KaliscoRush — Food Delivery Platform',
+    description: 'Built and deployed a full-stack food delivery platform inspired by Deliveroo. Features a Node.js/Express API with PostgreSQL, React frontend with Deliveroo-style UI, real-time order tracking, admin dashboard, image uploads via S3, and full CI/CD pipeline — all running on AWS.',
+    keyFeatures: [
+      'Full-stack: React 19 frontend + Express 5 API + PostgreSQL on RDS',
+      'AWS deployment: Elastic Beanstalk, S3, CloudFront (HTTPS), RDS',
+      'Auth system with JWT, bcrypt, role-based access control',
+      'Admin dashboard: restaurant/menu CRUD, order queue with status transitions',
+      'CI/CD: GitHub Actions auto-deploys on every push to main',
+      '126 unit tests, pre-signed S3 image uploads, 15s order polling',
+    ],
+    tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'AWS RDS', 'AWS S3', 'CloudFront', 'Elastic Beanstalk', 'GitHub Actions', 'Tailwind CSS', 'Zustand'],
+    live: 'https://d3801nx5humfo6.cloudfront.net',
+    github: 'https://github.com/karlonugha/Kiro_Projects',
+    emoji: '🍔',
+    color: 'from-purple-500/20 to-violet-600/20',
+    border: 'border-purple-500/30',
+    featured: true,
+    badge: 'Full-Stack Cloud Project',
+    comingSoon: false,
+    cloudProject: true,
+  },
   {
     title: 'Cloud Task Manager API',
     description: 'Built and deployed a RESTful API using Node.js, hosted on AWS EC2, with a PostgreSQL database on RDS. Implements user creation, task management (create, update, delete), secure access via security groups, and is designed for scalability and maintainability.',
