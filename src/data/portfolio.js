@@ -42,14 +42,24 @@ export const skills = [
 export const projects = [
   {
     title: 'KaliscoRush — Food Delivery Platform',
-    description: 'Built and deployed a full-stack food delivery platform inspired by Deliveroo. Features a Node.js/Express API with PostgreSQL, React frontend with Deliveroo-style UI, real-time order tracking, admin dashboard, image uploads via S3, and full CI/CD pipeline — all running on AWS.',
+    description: 'Designed and deployed a full-stack food delivery platform on AWS. Frontend hosted on S3 and delivered via CloudFront for global edge caching. Backend API deployed on Elastic Beanstalk with PostgreSQL on RDS. A single CloudFront distribution serves both frontend and API, eliminating CORS complexity. CI/CD via GitHub Actions auto-deploys on every push to main.',
+    architecture: [
+      'S3 + CloudFront → static frontend hosting with edge caching and HTTPS',
+      'Elastic Beanstalk → managed Node.js platform with auto-scaling and health monitoring',
+      'RDS (PostgreSQL) → relational data with foreign keys, managed backups, and failover',
+      'S3 pre-signed URLs → browser uploads images directly to S3, keeping the API lightweight',
+      'GitHub Actions → automated CI/CD: tests on PR, deploy on merge to main',
+    ],
     keyFeatures: [
       'Full-stack: React 19 frontend + Express 5 API + PostgreSQL on RDS',
-      'AWS deployment: Elastic Beanstalk, S3, CloudFront (HTTPS), RDS',
       'Auth system with JWT, bcrypt, role-based access control',
       'Admin dashboard: restaurant/menu CRUD, order queue with status transitions',
-      'CI/CD: GitHub Actions auto-deploys on every push to main',
       '126 unit tests, pre-signed S3 image uploads, 15s order polling',
+    ],
+    improvements: [
+      'Add CloudWatch monitoring with alarms for API latency and error rates',
+      'Evaluate Lambda + API Gateway for pay-per-request cost savings',
+      'Define infrastructure in CloudFormation/Terraform for reproducibility',
     ],
     tech: ['React', 'Node.js', 'Express', 'PostgreSQL', 'AWS RDS', 'AWS S3', 'CloudFront', 'Elastic Beanstalk', 'GitHub Actions', 'Tailwind CSS', 'Zustand'],
     live: 'https://d3801nx5humfo6.cloudfront.net',

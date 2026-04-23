@@ -15,7 +15,7 @@ A personal portfolio site for Karl Onugha, Cloud-Focused Developer. Built with R
 - **About** — background summary
 - **Skills** — categorised skill grid (Cloud, Networking, Systems, Development)
 - **Projects** — featured project cards with live/GitHub links:
-  - **KaliscoRush — Food Delivery Platform** (`🍔`) — full-stack food delivery app (React + Express + PostgreSQL) deployed on AWS (Elastic Beanstalk, S3, CloudFront, RDS). Live at [d3801nx5humfo6.cloudfront.net](https://d3801nx5humfo6.cloudfront.net) with source at [karlonugha/Kiro_Projects](https://github.com/karlonugha/Kiro_Projects)
+  - **KaliscoRush — Food Delivery Platform** (`🍔`) — full-stack food delivery platform on AWS. Frontend on S3 via CloudFront (edge caching + HTTPS), API on Elastic Beanstalk, PostgreSQL on RDS, pre-signed S3 image uploads, CI/CD via GitHub Actions. Includes architecture breakdown, key features, and planned improvements. Live at [d3801nx5humfo6.cloudfront.net](https://d3801nx5humfo6.cloudfront.net) with source at [karlonugha/kaliscorush](https://github.com/karlonugha/kaliscorush)
   - **Cloud Task Manager API** (`☁️`) — RESTful task management API live at `http://3.249.216.92:3000` with source at [karlonugha/cloud-task-manager-api](https://github.com/karlonugha/cloud-task-manager-api)
 - **Contact** — contact info panel and a Formspree-powered contact form
 
