@@ -48,7 +48,7 @@ export default function Projects() {
         {rest.length > 0 && (
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map(p => (
-              <ProjectCard key={p.title} project={p} small />
+              <ProjectCard key={p.title} project={p} />
             ))}
           </div>
         )}
@@ -57,7 +57,7 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ project: p, small }) {
+function ProjectCard({ project: p }) {
   return (
     <div className={`relative bg-gradient-to-br ${p.color} border ${p.border} rounded-2xl p-6 card-hover flex flex-col ${p.comingSoon ? 'opacity-80' : ''}`}>
       {/* Badge */}
@@ -77,6 +77,21 @@ function ProjectCard({ project: p, small }) {
       <h3 className="text-white font-bold text-lg mb-2">{p.title}</h3>
       <p className="text-gray-400 text-sm leading-relaxed mb-4">{p.description}</p>
 
+      {/* Architecture */}
+      {p.architecture && (
+        <div className="mb-4">
+          <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">Architecture & Why</p>
+          <ul className="space-y-1">
+            {p.architecture.map(a => (
+              <li key={a} className="flex items-start gap-2 text-gray-400 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-400 flex-shrink-0 mt-1" />
+                {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* Key Features */}
       {p.keyFeatures && (
         <div className="mb-4">
@@ -86,6 +101,21 @@ function ProjectCard({ project: p, small }) {
               <li key={f} className="flex items-start gap-2 text-gray-400 text-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0 mt-1" />
                 {f}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Improvements */}
+      {p.improvements && (
+        <div className="mb-4">
+          <p className="text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">What I'd Improve</p>
+          <ul className="space-y-1">
+            {p.improvements.map(imp => (
+              <li key={imp} className="flex items-start gap-2 text-gray-400 text-xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0 mt-1" />
+                {imp}
               </li>
             ))}
           </ul>
