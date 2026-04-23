@@ -74,14 +74,25 @@ export const projects = [
   },
   {
     title: 'Cloud Task Manager API',
-    description: 'Built and deployed a RESTful API using Node.js, hosted on AWS EC2, with a PostgreSQL database on RDS. Implements user creation, task management (create, update, delete), secure access via security groups, and is designed for scalability and maintainability.',
-    keyFeatures: [
-      'REST API endpoints for users and tasks',
-      'PostgreSQL on AWS RDS for persistent data storage',
-      'Deployed on AWS EC2 with security group configuration',
-      'Backend connected to cloud database for live access',
+    description: 'Designed and deployed a RESTful API on AWS EC2 with PostgreSQL on RDS. Security groups restrict database access to the EC2 instance only — no public DB exposure. Layered architecture with JWT auth, parameterized SQL queries, and ownership-scoped task access.',
+    architecture: [
+      'EC2 → hands-on infrastructure: security groups, SSH access, process management',
+      'RDS (PostgreSQL) → managed database with automated backups and SSL connections',
+      'Security Groups → network-level access control: DB only reachable from EC2',
+      'JWT stateless auth → scales horizontally without session storage',
     ],
-    tech: ['Node.js', 'Express', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'GitHub'],
+    keyFeatures: [
+      'Full CRUD API with user-scoped task ownership enforcement',
+      'Parameterized SQL queries preventing injection attacks',
+      'Fail-fast env validation — server refuses to start with missing config',
+      'Unit + integration test suite with Jest and Supertest',
+    ],
+    improvements: [
+      'Add HTTPS via ALB + ACM certificate for production-ready security',
+      'Add CI/CD pipeline with GitHub Actions for automated deployments',
+      'Add CloudWatch monitoring for CPU, memory, and error rate alerts',
+    ],
+    tech: ['Node.js', 'Express', 'PostgreSQL', 'AWS EC2', 'AWS RDS', 'JWT', 'Jest', 'Supertest'],
     live: 'http://3.249.216.92:3000',
     github: 'https://github.com/karlonugha/cloud-task-manager-api',
     emoji: '☁️',
