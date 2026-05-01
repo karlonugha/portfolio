@@ -228,6 +228,7 @@ export const projects = [
     ],
     tech: ['Python', 'AWS IoT Core', 'MQTT', 'Lambda', 'DynamoDB', 'API Gateway', 'WebSocket', 'Terraform', 'React', 'Zustand', 'pytest', 'Hypothesis'],
     github: 'https://github.com/karlonugha/iot-home-backend',
+    live: 'https://home-automation-app.vercel.app',
     emoji: '🏠',
     color: 'from-sky-500/20 to-indigo-500/20',
     border: 'border-sky-500/30',
