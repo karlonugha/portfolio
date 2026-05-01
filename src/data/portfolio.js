@@ -161,6 +161,7 @@ export const projects = [
     ],
     tech: ['React', 'Tailwind CSS', 'Terraform', 'AWS Lambda', 'API Gateway', 'DynamoDB', 'Node.js', 'IAM', 'CloudWatch'],
     github: 'https://github.com/karlonugha/terraform-serverless-api-',
+    live: 'https://terraform-serverless-api.vercel.app',
     emoji: '⚡',
     color: 'from-amber-500/20 to-orange-600/20',
     border: 'border-amber-500/30',
