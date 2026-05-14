@@ -264,7 +264,7 @@ export const projects = [
       'Add PCAP file import for offline analysis of captured traffic',
     ],
     tech: ['Python', 'FastAPI', 'Scapy', 'PostgreSQL', 'SQLAlchemy', 'React', 'TypeScript', 'Tailwind CSS', 'WebSocket', 'JWT', 'pytest'],
-    github: 'https://github.com/karlonugha/Kiro_Projects/tree/main/ot-asset-discovery',
+    github: 'https://github.com/karlonugha/ot-asset-discovery',
     emoji: '🔍',
     color: 'from-cyan-500/20 to-teal-600/20',
     border: 'border-cyan-500/30',
